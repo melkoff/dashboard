@@ -31,7 +31,7 @@ function displayRows() {
    if (totalPages > 1) {
       // Add previous page button
       let prevButton = document.createElement('button');
-      prevButton.innerText = '«';
+      prevButton.innerText = '‹';
       prevButton.onclick = function () {
          if (currentPage > 1) {
             currentPage--;
@@ -101,7 +101,7 @@ function displayRows() {
 
       // Add next page button
       let nextButton = document.createElement('button');
-      nextButton.innerText = '»';
+      nextButton.innerText = '›';
       nextButton.onclick = function () {
          if (currentPage < totalPages) {
             currentPage++;
