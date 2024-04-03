@@ -15,7 +15,7 @@
          width: 100%;
          background-color: #fff;
          border-radius: 30px;
-         padding: 40px 0;
+         padding: 40px;
 
          .table {
             &__container {
@@ -23,7 +23,6 @@
                align-items: center;
                justify-content: space-between;
                margin-bottom: 50px;
-               padding: 0 40px;
 
                &-title {
                   h2 {
@@ -31,12 +30,15 @@
                      font-weight: 600;
                      font-family: $main-font-family;
                      color: $main-color;
+                     padding: 0px;
+                     margin-bottom: 20px;
                   }
 
                   p {
                      font-family: $main-font-family;
                      font-size: 14px;
                      color: #16c098;
+                     padding: 0px;
                   }
                }
 
@@ -70,9 +72,10 @@
                table {
                   width: 100%;
 
-                  tr {
+                  .table-top {
                      th {
-                        text-align: center;
+                        width: 15%;
+                        text-align: left;
                         font-size: 14px;
                         font-weight: 500;
                         color: #b5b7c0;
@@ -80,6 +83,50 @@
                         border-bottom: 1px solid #eeeeee;
                      }
                   }
+
+                  tr {
+                     //td
+                     td {
+                        padding: 24px 0;
+                        border-bottom: 1px solid #eeeeee;
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: #292d32;
+                     }
+
+                     .status-active {
+                        color: #008767 !important;
+                        width: 10%;
+                        span {
+                           border: 2px solid #008767;
+                           background-color: #a6e7d8;
+                           border-radius: 8px;
+                           display: block;
+                           width: 80px;
+                           padding: 6px 0;
+                           text-align: center;
+                        }
+                     }
+
+                     .status-inactive {
+                        color: #df0404 !important;
+                        width: 10%;
+                        span {
+                           border: 2px solid #df0404;
+                           background-color: #ffc5c5;
+                           border-radius: 8px;
+                           display: block;
+                           width: 80px;
+                           padding: 6px 0;
+                           text-align: center;
+                        }
+                     }
+                  }
+               }
+
+               //pagination
+               .pagination {
+                  display: inline-block;
                }
             }
          }
