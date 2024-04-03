@@ -52,9 +52,16 @@ function displayRows() {
       }
       pagination.appendChild(firstPageButton);
 
+      // Add dots before first button
+      if (totalPages > 4 && currentPage > 2) {
+         let dotsStart = document.createElement('span');
+         dotsStart.innerText = '...';
+         pagination.appendChild(dotsStart);
+      }
+
       // Add page buttons
       let startButton = Math.max(2, currentPage - 1);
-      let endButton = Math.min(startButton + 3, totalPages);
+      let endButton = Math.min(startButton + 2, totalPages); // Changed here
       for (let i = startButton; i <= endButton; i++) {
          let linkPagination = document.createElement('button');
          linkPagination.innerText = i;
@@ -67,6 +74,25 @@ function displayRows() {
          };
          pagination.appendChild(linkPagination);
       }
+
+      // Add dots after last button
+      if (totalPages > 4 && currentPage < totalPages - 1) {
+         let dotsEnd = document.createElement('span');
+         dotsEnd.innerText = '...';
+         pagination.appendChild(dotsEnd);
+      }
+
+      // Add last page button
+      let lastPageButton = document.createElement('button');
+      lastPageButton.innerText = totalPages;
+      lastPageButton.onclick = function () {
+         currentPage = totalPages;
+         displayRows();
+      };
+      if (currentPage === totalPages) {
+         lastPageButton.classList.add('active');
+      }
+      pagination.appendChild(lastPageButton);
 
       // Add next page button
       let nextButton = document.createElement('button');
