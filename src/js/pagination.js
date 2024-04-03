@@ -53,7 +53,7 @@ function displayRows() {
       pagination.appendChild(firstPageButton);
 
       // Add dots before first button
-      if (totalPages > 4 && currentPage > 2) {
+      if (totalPages > 3 && currentPage > 3) {
          let dotsStart = document.createElement('span');
          dotsStart.innerText = '...';
          pagination.appendChild(dotsStart);
@@ -61,7 +61,10 @@ function displayRows() {
 
       // Add page buttons
       let startButton = Math.max(2, currentPage - 1);
-      let endButton = Math.min(startButton + 2, totalPages); // Changed here
+      let endButton = Math.min(startButton + 1, totalPages);
+      if (currentPage === totalPages - 1 && totalPages > 4) {
+         startButton -= 1;
+      }
       for (let i = startButton; i <= endButton; i++) {
          let linkPagination = document.createElement('button');
          linkPagination.innerText = i;
@@ -76,13 +79,13 @@ function displayRows() {
       }
 
       // Add dots after last button
-      if (totalPages > 4 && currentPage < totalPages - 1) {
+      if (totalPages > 1 && currentPage < totalPages - 1) {
          let dotsEnd = document.createElement('span');
          dotsEnd.innerText = '...';
          pagination.appendChild(dotsEnd);
       }
 
-      // Add last page button
+      // Add last page button only if it doesn't already exist
       let lastPageButton = document.createElement('button');
       lastPageButton.innerText = totalPages;
       lastPageButton.onclick = function () {
@@ -92,7 +95,9 @@ function displayRows() {
       if (currentPage === totalPages) {
          lastPageButton.classList.add('active');
       }
-      pagination.appendChild(lastPageButton);
+      if (currentPage !== totalPages) {
+         pagination.appendChild(lastPageButton);
+      }
 
       // Add next page button
       let nextButton = document.createElement('button');
