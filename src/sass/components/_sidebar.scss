@@ -1,0 +1,125 @@
+.sidebar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100vh;
+   width: 306px;
+   max-width: 100%;
+   background-color: #fff;
+   &__container {
+      padding: 40px 30px 75px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      &-logo {
+         display: flex;
+         align-items: center;
+         padding-bottom: 60px;
+
+         a {
+            margin-right: 12px;
+         }
+
+         p {
+            font-size: 26px;
+            font-weight: 600;
+            font-family: $main-font-family;
+            color: #000;
+            span {
+               font-size: 10px;
+               font-weight: 400;
+               color: #838383;
+            }
+         }
+      }
+
+      &-menu {
+         .main-menu {
+            margin-left: 10px;
+
+            li {
+               margin: 16px 0;
+               border-radius: 8px;
+               transition: 0.3s;
+               position: relative;
+
+               &::before {
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  bottom: 0;
+                  width: 100%;
+                  height: 2px;
+                  background-color: #989898;
+                  border-radius: 4px;
+                  scale: 0 1;
+                  transform-origin: right;
+                  transition: scale 0.25s;
+               }
+
+               &:hover::before {
+                  scale: 1;
+                  transform-origin: left;
+               }
+
+               a {
+                  display: flex;
+                  align-items: center;
+                  font-size: 14px;
+                  font-weight: 500;
+                  padding: 12px;
+                  font-family: $main-font-family;
+                  color: $second-color;
+
+                  svg {
+                     &:nth-child(1) {
+                        margin-right: 16px;
+                     }
+                  }
+
+                  p {
+                     flex: 1;
+                  }
+               }
+            }
+         }
+      }
+
+      &-user {
+         flex: 1 0;
+
+         .user {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column-reverse;
+            &__container {
+               border-radius: 8px;
+               a {
+                  display: flex;
+                  align-items: center;
+
+                  img {
+                     width: 42px;
+                     height: 42px;
+                     margin-right: 12px;
+                  }
+
+                  p {
+                     font-size: 14px;
+                     font-family: $main-font-family;
+                     color: $main-color;
+                     font-weight: 500;
+                     span {
+                        font-size: 12px;
+                        color: #757575;
+                        font-weight: 400;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}

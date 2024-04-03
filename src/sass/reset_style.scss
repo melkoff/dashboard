@@ -81,9 +81,10 @@ video {
 }
 body {
 	line-height: 1;
+	background-color: #8c97c3;
 }
 body ::selection {
-	background-color: red;
+	background-color: #5932ea;
 	color: white;
 }
 
@@ -91,7 +92,7 @@ body::-webkit-scrollbar {
 	width: 5px; /* Adjust the width as needed */
 }
 body::-webkit-scrollbar-thumb {
-	background-color: rgb(231, 0, 0); /* Set your desired color */
+	background-color: #5932ea; /* Set your desired color */
 	border-radius: 5px;
 }
 
@@ -119,7 +120,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-	content: '';
+	content: "";
 	content: none;
 }
 a {

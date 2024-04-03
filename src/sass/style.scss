@@ -1,16 +1,17 @@
-@import 'reset_style.scss';
-@import 'base/func';
-@import 'fonts/font';
-@import 'base/ui';
-@import 'base/animation';
+@import "reset_style.scss";
+@import "fonts/font";
+@import "base/ui";
+@import "base/animation";
+@import "base/variables";
 
-@import '../css/bootstrap.min.css';
+@import "../css/bootstrap.min.css";
 //@import "libs/slick-theme.scss";
-@import 'libs/slick.scss';
+@import "libs/slick.scss";
 
-@import 'components/popup';
-@import 'components/header';
-@import 'components/slider';
-@import 'components/footer';
-@import 'components/hero';
-@import 'components/projects';
+//@import header and footer style
+@import "components/header";
+@import "components/footer";
+
+//@import sidebar and main content style
+@import "components/sidebar";
+@import "components/customers";
