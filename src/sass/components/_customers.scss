@@ -127,6 +127,22 @@
                //pagination
                .pagination {
                   display: inline-block;
+                  float: right;
+               }
+
+               .pagination button {
+                  color: $main-color;
+                  padding: 8px 16px;
+                  background-color: #f5f5f5;
+                  text-decoration: none;
+                  border: 2px solid #eeeeee;
+                  border-radius: 4px;
+                  transition: background-color 0.3s;
+               }
+
+               .pagination button.active {
+                  background-color: #5932ea;
+                  color: white;
                }
             }
          }

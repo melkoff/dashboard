@@ -4,38 +4,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
    // Function to add click event on menu links
    function handleClick(event) {
-      // Prevent default
       event.preventDefault();
 
-      // Remove 'active-link' class from all links
+      // Remove 'active-link' class
       menuLinks.forEach(link => {
          link.classList.remove('active-link');
       });
 
-      // Add 'active-link' class to the clicked link
+      // Add 'active-link' class
       this.classList.add('active-link');
 
       // Get href attribute clicked link
       const href = this.querySelector('a').getAttribute('href');
-
-      // Navigate to the clicked link
       window.location.href = href;
 
-      // Save href in local storage
+      // Save href
       localStorage.setItem('activeLink', href);
    }
 
    // Function to add click event on logo link
    function handleLogoClick(event) {
-      // Prevent default
       event.preventDefault();
 
-      // Remove 'active-link' class from all links
+      // Remove 'active-link' class
       menuLinks.forEach(link => {
          link.classList.remove('active-link');
       });
 
-      // Save empty href in local storage
+      // Save empty href
       localStorage.setItem('activeLink', '');
 
       // Navigate to the homepage
@@ -50,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
    // Add click event to logo link
    logoLink.addEventListener('click', handleLogoClick);
 
-   // Check if active link saved in local storage
+   // Check if active link saved
    const activeLink = localStorage.getItem('activeLink');
 
    // If active link saved add 'active-link' class
