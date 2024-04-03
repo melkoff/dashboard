@@ -1,0 +1,88 @@
+.customers {
+   &__container {
+      padding: 45px 50px;
+      &-title {
+         h1 {
+            color: $main-color;
+            font-family: $main-font-family;
+            font-size: 24px;
+            font-weight: 500;
+            padding-bottom: 60px;
+         }
+      }
+
+      &-table {
+         width: 100%;
+         background-color: #fff;
+         border-radius: 30px;
+         padding: 40px 0;
+
+         .table {
+            &__container {
+               display: flex;
+               align-items: center;
+               justify-content: space-between;
+               margin-bottom: 50px;
+               padding: 0 40px;
+
+               &-title {
+                  h2 {
+                     font-size: 22px;
+                     font-weight: 600;
+                     font-family: $main-font-family;
+                     color: $main-color;
+                  }
+
+                  p {
+                     font-family: $main-font-family;
+                     font-size: 14px;
+                     color: #16c098;
+                  }
+               }
+
+               &-form {
+                  form {
+                     width: 216px;
+                     height: 38px;
+                     background-color: #f9fbff;
+                     border-radius: 30px;
+
+                     display: flex;
+                     align-items: center;
+
+                     img {
+                        margin-right: 10px;
+                     }
+
+                     input {
+                        background-color: transparent;
+
+                        border: none;
+                     }
+                  }
+               }
+            }
+
+            // table data
+
+            &__data {
+               width: 100%;
+               table {
+                  width: 100%;
+
+                  tr {
+                     th {
+                        text-align: center;
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: #b5b7c0;
+                        padding-bottom: 20px;
+                        border-bottom: 1px solid #eeeeee;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
