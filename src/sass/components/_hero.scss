@@ -1,0 +1,247 @@
+.hero {
+   min-height: 100vh;
+
+   // .hero__wrapper
+
+   &__wrapper {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+   }
+
+   // .hero__container
+
+   &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   // .hero__left
+
+   &__left {
+      flex: 0 1 60%;
+      display: flex;
+      flex-direction: column;
+   }
+   .hero__btn {
+      .line {
+         position: relative;
+      }
+   }
+
+   // .hero__title
+
+   &__title {
+      max-width: 870px;
+      margin-bottom: 25px;
+      font-size: 58px;
+      font-weight: 600;
+      line-height: 1.125;
+      color: #232323;
+      .line {
+         position: unset;
+      }
+      b {
+         color: red;
+         font-weight: inherit;
+      }
+   }
+
+   // .hero__btn-wrapper
+
+   &__btn-wrapper {
+   }
+
+   // .hero__btn
+
+   &__btn {
+   }
+
+   // .hero__partners
+
+   &__partners {
+      display: flex;
+      align-items: center;
+      column-gap: 40px;
+      margin-top: 100px;
+   }
+
+   // .hero__partners-logo
+
+   &__partners-logo {
+   }
+
+   // .hero__partners-link
+
+   &__partners-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      filter: grayscale(1);
+      transition: all 0.3s ease 0s;
+      @media (any-hover: hover) {
+         &:hover {
+            filter: grayscale(0);
+         }
+      }
+      img {
+         max-width: 110px;
+         max-height: 40px;
+      }
+   }
+
+   // .hero__partners-img
+
+   &__partners-img {
+   }
+
+   // .hero__right
+
+   &__right {
+      position: relative;
+      flex: 1 1 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .line {
+         position: relative;
+      }
+   }
+
+   // .hero__number-counter
+
+   &__number-count {
+      font-size: 500px;
+      color: grey;
+      opacity: 0.2;
+      font-weight: 900;
+      letter-spacing: -20px;
+      stroke: #e6e6e6;
+      line-height: 0.85;
+      .word {
+         display: flex !important;
+      }
+   }
+
+   // .hero__number
+
+   &__number {
+      font-weight: 900;
+      stroke: #e6e6e6;
+      backface-visibility: hidden;
+      fill: transparent;
+      text {
+         font-size: 130px;
+         letter-spacing: -6px;
+      }
+   }
+
+   // .hero__supNumber
+
+   &__supNumber {
+      letter-spacing: 0.05em;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 1.4;
+      color: #424242;
+      text-transform: uppercase;
+   }
+
+   // .hero__scroll
+
+   &__scroll {
+      position: absolute;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%) rotate(90deg);
+   }
+
+   // .hero__scroll-img
+
+   &__scroll-img {
+      path:nth-child(1) {
+         animation: dashDown 10s linear infinite;
+      }
+   }
+}
+
+@media (max-width: (1200px)) {
+   .hero__container {
+      flex-direction: column-reverse;
+   }
+   .hero {
+      padding: 130px 0 0 0;
+      min-height: auto;
+      margin-bottom: 100px;
+      &__wrapper {
+         height: auto;
+      }
+   }
+   .hero__number-count {
+      font-size: 300px;
+      opacity: 0.1;
+      letter-spacing: 0px;
+   }
+   .hero__supNumber {
+      font-size: 15px;
+   }
+   .hero__right {
+      margin-bottom: 30px;
+      flex: 1 1 auto;
+   }
+   .hero__left {
+      flex: 1 1 auto;
+      align-items: center;
+   }
+   .hero__title {
+      font-size: 30px;
+      text-align: center;
+   }
+}
+.hero__partners {
+   margin-top: 45px;
+}
+
+@media (max-width: (590px)) {
+   .hero {
+      min-height: 100vh;
+      padding: 0;
+   }
+   .hero__container {
+      min-height: 100vh;
+      padding-top: 80px;
+   }
+   .hero__wrapper {
+      min-height: 100vh;
+   }
+   .hero__scroll {
+      display: block;
+      bottom: 30px;
+   }
+   .hero__number-count {
+      font-size: 200px;
+   }
+   .hero__right {
+      justify-content: flex-end;
+   }
+   .hero__partners {
+      flex: 1 1 auto;
+      align-items: flex-end;
+      margin-bottom: 150px;
+      column-gap: 10px;
+   }
+   .hero__supNumber {
+      font-size: 12px;
+      margin-top: 10px;
+   }
+   .hero__partners-link img {
+      max-width: 90px;
+   }
+}
+@media screen and (min-width: 590px) and (max-width: 1200px) {
+   .hero__scroll-img {
+      display: none;
+   }
+}

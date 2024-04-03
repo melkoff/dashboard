@@ -1,0 +1,16 @@
+@import 'reset_style.scss';
+@import 'base/func';
+@import 'fonts/font';
+@import 'base/ui';
+@import 'base/animation';
+
+@import '../css/bootstrap.min.css';
+//@import "libs/slick-theme.scss";
+@import 'libs/slick.scss';
+
+@import 'components/popup';
+@import 'components/header';
+@import 'components/slider';
+@import 'components/footer';
+@import 'components/hero';
+@import 'components/projects';
