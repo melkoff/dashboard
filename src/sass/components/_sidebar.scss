@@ -6,6 +6,7 @@
    width: 306px;
    max-width: 100%;
    background-color: #fff;
+
    &__container {
       padding: 40px 30px 75px;
       height: 100%;
@@ -100,6 +101,28 @@
                   p {
                      flex: 1;
                   }
+               }
+            }
+
+            // add styles when menu item is active
+            li.active-link {
+               background-color: #5932ea;
+               color: #fff;
+
+               a {
+                  color: #fff;
+               }
+
+               .icon {
+                  display: none;
+               }
+
+               .icon-white {
+                  display: block;
+               }
+
+               svg path {
+                  stroke: #fff;
                }
             }
          }

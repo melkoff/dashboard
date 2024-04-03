@@ -1,0 +1,23 @@
+.wrong {
+   margin-left: 320px;
+   padding: 0 30px 0 20px;
+   height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   &__container {
+      width: 100%;
+      padding: 30px;
+      background-color: #8c97c3;
+      border-radius: 8px;
+
+      &-title {
+         text-align: center;
+         font-size: 35px;
+
+         @media screen and (max-width: 992px) {
+            font-size: 22px;
+         }
+      }
+   }
+}

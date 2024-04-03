@@ -1,38 +1,69 @@
-// get all tags <a> in class .main-menu
-const menuLinks = document.querySelectorAll('.main-menu li');
+document.addEventListener('DOMContentLoaded', function () {
+   const menuLinks = document.querySelectorAll('.main-menu li');
+   const logoLink = document.querySelector('.sidebar__container-logo a');
 
-// add events
-menuLinks.forEach(link => {
-   link.addEventListener('click', function (event) {
+   // Function to add click event on menu links
+   function handleClick(event) {
+      // Prevent default
       event.preventDefault();
 
-      // other links will be by default
+      // Remove 'active-link' class from all links
       menuLinks.forEach(link => {
          link.classList.remove('active-link');
-         link.querySelector('a').style.color = '';
-         link.querySelector('svg path').style.stroke = '';
-         link.querySelector('.icon').style.display = '';
-         link.querySelector('.icon-white').style.display = '';
       });
 
-      // add class to element <li>
+      // Add 'active-link' class to the clicked link
       this.classList.add('active-link');
 
-      // change link color
-      const linkColor = this.querySelector('a');
-      linkColor.style.color = '#fff';
+      // Get href attribute clicked link
+      const href = this.querySelector('a').getAttribute('href');
 
-      // change icon
-      const iconMain = this.querySelector('.icon');
-      iconMain.style.display = 'none';
+      // Navigate to the clicked link
+      window.location.href = href;
 
-      // change icon white
-      const iconWhite = this.querySelector('.icon-white');
-      iconWhite.style.display = 'block';
+      // Save href in local storage
+      localStorage.setItem('activeLink', href);
+   }
 
-      // change SVG color
-      const svgIconColor = this.querySelector('svg path');
-      svgIconColor.style.stroke = '#fff';
+   // Function to add click event on logo link
+   function handleLogoClick(event) {
+      // Prevent default
+      event.preventDefault();
+
+      // Remove 'active-link' class from all links
+      menuLinks.forEach(link => {
+         link.classList.remove('active-link');
+      });
+
+      // Save empty href in local storage
+      localStorage.setItem('activeLink', '');
+
+      // Navigate to the homepage
+      window.location.href = this.getAttribute('href');
+   }
+
+   // Add click event to menu links
+   menuLinks.forEach(link => {
+      link.addEventListener('click', handleClick);
    });
 
+   // Add click event to logo link
+   logoLink.addEventListener('click', handleLogoClick);
+
+   // Check if active link saved in local storage
+   const activeLink = localStorage.getItem('activeLink');
+
+   // If active link saved add 'active-link' class
+   if (activeLink) {
+      if (activeLink === '/') {
+         // Remove 'active-link' class from all links if homepage saved
+         menuLinks.forEach(link => {
+            link.classList.remove('active-link');
+         });
+      } else {
+         // Add 'active-link' class to the saved active link
+         const activeLinkElement = document.querySelector(`.main-menu li a[href="${activeLink}"]`).parentNode;
+         activeLinkElement.classList.add('active-link');
+      }
+   }
 });
