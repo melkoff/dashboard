@@ -2,6 +2,10 @@
    animation: fadeInDown 1.5s;
    &__container {
       padding: 45px 50px;
+      @media screen and (max-width: 1260px) {
+         padding: 45px 10px;
+      }
+
       &-title {
          position: relative;
          h1 {
@@ -26,7 +30,7 @@
          width: 55px;
          border: 2px solid #a2a2a2;
          border-radius: 15px;
-         padding: 4px 6px;
+         padding: 4px;
          display: flex;
          transition:
             padding-left 0.3s,
@@ -65,6 +69,10 @@
          background-color: var(--table-color);
          border-radius: 30px;
          padding: 40px;
+
+         @media screen and (max-width: 1120px) {
+            padding: 35px 25px;
+         }
 
          .table {
             &__container {
@@ -141,6 +149,10 @@
                         font-size: 14px;
                         font-weight: 500;
                         color: var(--table-data-text);
+
+                        @media screen and (max-width: 1260px) {
+                           font-size: 12px;
+                        }
                      }
 
                      .status-active {
