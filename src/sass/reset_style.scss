@@ -79,9 +79,28 @@ video {
 	vertical-align: baseline;
 	background: transparent;
 }
+
+// main colors
+
+:root {
+	--body-color: #8c97c3;
+	--nav-color: #fff;
+	--user-name: #000;
+	--table-color: #fff;
+	--table-title: #000;
+	--table-data-text: #292d32;
+}
+.dark-theme {
+	--body-color: #000;
+	--nav-color: #2a2a2a;
+	--user-name: #fff;
+	--table-color: #2a2a2a;
+	--table-title: #fff;
+	--table-data-text: #fff;
+}
 body {
 	line-height: 1;
-	background-color: #8c97c3;
+	background-color: --body-color;
 }
 body ::selection {
 	background-color: #5932ea;

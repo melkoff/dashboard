@@ -14,7 +14,7 @@
 
       &-table {
          width: 100%;
-         background-color: #fff;
+         background-color: var(--table-color);
          border-radius: 30px;
          padding: 40px;
 
@@ -30,7 +30,7 @@
                      font-size: 22px;
                      font-weight: 600;
                      font-family: $main-font-family;
-                     color: $main-color;
+                     color: var(--table-title);
                      padding: 0px;
                      margin-bottom: 20px;
                   }
@@ -92,7 +92,7 @@
                         border-bottom: 1px solid #eeeeee;
                         font-size: 14px;
                         font-weight: 500;
-                        color: #292d32;
+                        color: var(--table-data-text);
                      }
 
                      .status-active {

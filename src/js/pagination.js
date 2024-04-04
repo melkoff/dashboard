@@ -55,6 +55,7 @@ function displayRows() {
       // Add dots before first button
       if (totalPages > 3 && currentPage > 3) {
          let dotsStart = document.createElement('span');
+         dotsStart.style.color = '#b5b7c0';
          dotsStart.innerText = '...';
          pagination.appendChild(dotsStart);
       }
@@ -81,6 +82,7 @@ function displayRows() {
       // Add dots after last button
       if (totalPages > 1 && currentPage < totalPages - 1) {
          let dotsEnd = document.createElement('span');
+         dotsEnd.style.color = '#b5b7c0';
          dotsEnd.innerText = '...';
          pagination.appendChild(dotsEnd);
       }

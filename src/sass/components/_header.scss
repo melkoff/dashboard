@@ -1,0 +1,33 @@
+.header {
+   &__container {
+      &-theme {
+         #dark-theme {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            background: #ccc;
+            width: 45px;
+            border-radius: 15px;
+            padding: 2px 3px;
+            display: flex;
+            transition:
+               padding-left 0.3s,
+               background 0.3s;
+
+            span {
+               width: 18px;
+               height: 18px;
+               border-radius: 50%;
+               background: #fff;
+               display: inline-block;
+               transition: 0.3s;
+            }
+         }
+         #dark-theme.dark-btn {
+            padding-left: 23px;
+            background: #bc2f2f;
+         }
+      }
+   }
+}

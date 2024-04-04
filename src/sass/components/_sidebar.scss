@@ -5,7 +5,7 @@
    height: 100vh;
    width: 306px;
    max-width: 100%;
-   background-color: #fff;
+   background-color: var(--nav-color);
    animation: fadeInLeft 1s;
 
    &__container {
@@ -152,7 +152,7 @@
                   p {
                      font-size: 14px;
                      font-family: $main-font-family;
-                     color: $main-color;
+                     color: var(--user-name);
                      font-weight: 500;
                      span {
                         font-size: 12px;
