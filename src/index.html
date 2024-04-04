@@ -17,13 +17,17 @@
 </head>
 
 <body>
-	@@include("components/_header.html")
-	@@include("components/_sidebar.html")
 
-	@@include("components/_wrong.html")
-	@@include("components/_footer.html")
+	<main>
+		@@include("components/_header.html")
+		@@include("components/_sidebar.html")
 
-	@@include("icons/_icons.html")
+		@@include("components/_wrong.html")
+		@@include("components/_footer.html")
+
+		@@include("icons/_icons.html")
+	</main>
+
 	<script src="https://unpkg.com/split-type"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>

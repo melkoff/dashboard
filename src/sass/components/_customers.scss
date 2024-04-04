@@ -3,6 +3,7 @@
    &__container {
       padding: 45px 50px;
       &-title {
+         position: relative;
          h1 {
             color: $main-color;
             font-family: $main-font-family;
@@ -10,6 +11,53 @@
             font-weight: 500;
             padding-bottom: 60px;
          }
+      }
+
+      // dark theme
+      #dark-theme {
+         position: absolute;
+         top: 0;
+         right: 0;
+         cursor: pointer;
+         background-image: url("../img/sun-sky.png");
+         background-position: 100%;
+         background-repeat: no-repeat;
+         background-size: cover;
+         width: 55px;
+         border: 2px solid #a2a2a2;
+         border-radius: 15px;
+         padding: 4px 6px;
+         display: flex;
+         transition:
+            padding-left 0.3s,
+            background 0.3s;
+
+         #sun-moon {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: inline-block;
+            transition: 0.3s;
+            background-image: url("../img/sun.png");
+            background-position: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+         }
+
+         .sun-moon {
+            background-image: url("../img/full-moon.png") !important;
+            background-position: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+         }
+      }
+
+      #dark-theme.dark-btn {
+         padding-left: 29px;
+         background-image: url("../img/night-sky.png") !important;
+         background-position: 100%;
+         background-repeat: no-repeat;
+         background-size: cover;
       }
 
       &-table {
