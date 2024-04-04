@@ -85,7 +85,7 @@ function displayRows() {
          pagination.appendChild(dotsEnd);
       }
 
-      // Add last page button only if it doesn't already exist
+      // Add last page button
       let lastPageButton = document.createElement('button');
       lastPageButton.innerText = totalPages;
       lastPageButton.onclick = function () {
@@ -114,5 +114,3 @@ function displayRows() {
 
 currentPage = 1;
 displayRows();
-
-console.log('Pagination script loaded');
