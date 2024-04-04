@@ -1,6 +1,6 @@
 // Pagination script
 let table = document.getElementById('myTable');
-let rowsPerPage = 4;
+let rowsPerPage = 8;
 let currentPage = 1;
 
 function displayRows() {

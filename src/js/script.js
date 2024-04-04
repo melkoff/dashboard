@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
    const menuLinks = document.querySelectorAll('.main-menu li');
    const logoLink = document.querySelector('.sidebar__container-logo a');
+   const openSideBar = document.getElementById('burger-menu');
+   const sidebar = document.querySelector('.sidebar');
+   const closeSideBar = document.getElementById('close-burger-menu');
 
    // Function to add click event on menu links
    function handleClick(event) {
@@ -38,6 +41,11 @@ document.addEventListener('DOMContentLoaded', function () {
       window.location.href = this.getAttribute('href');
    }
 
+   // Function to handle burger menu click
+   function handleBurgerMenuClick() {
+      sidebar.style.left = '-100%';
+   }
+
    // Add click event to menu links
    menuLinks.forEach(link => {
       link.addEventListener('click', handleClick);
@@ -45,6 +53,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
    // Add click event to logo link
    logoLink.addEventListener('click', handleLogoClick);
+
+   // Add click event to burger menu
+   openSideBar.addEventListener('click', () => {
+      sidebar.style.left = '0';
+   });
+   closeSideBar.addEventListener('click', handleBurgerMenuClick);
 
    // Check if active link saved
    const activeLink = localStorage.getItem('activeLink');

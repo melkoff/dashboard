@@ -8,12 +8,39 @@
 
       &-title {
          position: relative;
+         display: flex;
+
+         .burger-menu {
+            display: none;
+            margin-right: 20px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+
+            @media screen and (max-width: 992px) {
+               display: block;
+            }
+
+            @media screen and (max-width: 576px) {
+               margin-right: 10px;
+            }
+
+            img {
+               width: 100%;
+               height: 100%;
+            }
+         }
+
          h1 {
             color: $main-color;
             font-family: $main-font-family;
             font-size: 24px;
             font-weight: 500;
             padding-bottom: 60px;
+
+            @media screen and (max-width: 576px) {
+               font-size: 20px;
+            }
          }
       }
 
@@ -74,6 +101,14 @@
             padding: 35px 25px;
          }
 
+         @media screen and (max-width: 768px) {
+            padding: 35px 15px;
+         }
+
+         @media screen and (max-width: 576px) {
+            padding: 35px 10px;
+         }
+
          .table {
             &__container {
                display: flex;
@@ -89,6 +124,11 @@
                      color: var(--table-title);
                      padding: 0px;
                      margin-bottom: 20px;
+
+                     @media screen and (max-width: 576px) {
+                        font-size: 18px;
+                        margin-bottom: 10px;
+                     }
                   }
 
                   p {
@@ -96,6 +136,10 @@
                      font-size: 14px;
                      color: #16c098;
                      padding: 0px;
+
+                     @media screen and (max-width: 576px) {
+                        font-size: 12px;
+                     }
                   }
                }
 
@@ -105,6 +149,10 @@
                      height: 38px;
                      background-color: #f9fbff;
                      border-radius: 30px;
+
+                     @media screen and (max-width: 576px) {
+                        width: 150px;
+                     }
 
                      display: flex;
                      align-items: center;
@@ -130,14 +178,69 @@
                   width: 100%;
 
                   .table-top {
-                     th {
-                        width: 15%;
+                     .th {
                         text-align: left;
                         font-size: 14px;
                         font-weight: 500;
                         color: #b5b7c0;
                         padding-bottom: 20px;
                         border-bottom: 1px solid #eeeeee;
+
+                        @media screen and (max-width: 1260px) {
+                           font-size: 12px;
+                        }
+
+                        @media screen and (max-width: 992px) {
+                           font-size: 10px;
+                        }
+                     }
+
+                     .table-customer {
+                        @media screen and (max-width: 768px) {
+                           width: 15%;
+                        }
+
+                        @media screen and (max-width: 576px) {
+                           width: 20%;
+                        }
+                     }
+
+                     .table-company {
+                        @media screen and (max-width: 768px) {
+                           width: 15%;
+                        }
+
+                        @media screen and (max-width: 576px) {
+                           width: 20%;
+                        }
+                     }
+
+                     .table-phone {
+                        @media screen and (max-width: 768px) {
+                           width: 20%;
+                        }
+                     }
+
+                     .table-email {
+                        @media screen and (max-width: 768px) {
+                           width: 20%;
+                        }
+                     }
+
+                     .table-country {
+                        @media screen and (max-width: 768px) {
+                           width: 15%;
+                        }
+                     }
+
+                     .table-status {
+                        @media screen and (max-width: 768px) {
+                           width: 10%;
+                        }
+
+                        @media screen and (max-width: 576px) {
+                           width: 5%;
+                        }
                      }
                   }
 
@@ -153,6 +256,21 @@
                         @media screen and (max-width: 1260px) {
                            font-size: 12px;
                         }
+
+                        @media screen and (max-width: 992px) {
+                           padding: 18px 0;
+                           font-size: 10px;
+                        }
+
+                        @media screen and (max-width: 768px) {
+                           padding: 18px 0;
+                           font-size: 8px;
+                        }
+
+                        @media screen and (max-width: 576px) {
+                           padding: 14px 0;
+                           font-size: 6px;
+                        }
                      }
 
                      .status-active {
@@ -166,6 +284,13 @@
                            width: 80px;
                            padding: 6px 0;
                            text-align: center;
+                           @media screen and (max-width: 768px) {
+                              width: 60px;
+                           }
+
+                           @media screen and (max-width: 576px) {
+                              width: 40px;
+                           }
                         }
                      }
 
@@ -180,6 +305,13 @@
                            width: 80px;
                            padding: 6px 0;
                            text-align: center;
+                           @media screen and (max-width: 768px) {
+                              width: 60px;
+                           }
+
+                           @media screen and (max-width: 576px) {
+                              width: 40px;
+                           }
                         }
                      }
                   }
