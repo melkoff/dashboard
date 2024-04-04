@@ -77,3 +77,26 @@ document.addEventListener('DOMContentLoaded', function () {
       }
    }
 });
+
+// Filter table
+function filterTable() {
+   let input, filter, table, tr, td, i, txtValue;
+   input = document.getElementById("tableSearch");
+   filter = input.value.toUpperCase();
+   table = document.getElementById("myTable");
+   tr = table.getElementsByTagName("tr");
+   for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td");
+      for (let j = 0; j < td.length; j++) {
+         if (td[j]) {
+            txtValue = td[j].textContent || td[j].innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+               tr[i].style.display = "";
+               break; // Show the row if at least one cell matches
+            } else {
+               tr[i].style.display = "none"; // Hide the row if no cell matches
+            }
+         }
+      }
+   }
+}
